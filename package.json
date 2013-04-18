@@ -1,6 +1,6 @@
 {
-  "name": "icon-button",
-  "version": "0.0.0",
+  "name": "navigation-bar",
+  "version": "0.1.0",
   "description": "TopCoat navigation bar skin",
   "directories": {
     "test": "test"
