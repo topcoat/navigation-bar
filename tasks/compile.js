@@ -10,11 +10,12 @@ module.exports = function(grunt) {
 
         var getPathData = function() {
                 var controlsPath = grunt.file.expand('tmp/src/controls/**/src/mixins'),
-                    utilsPath = grunt.file.expand('tmp/src/utils/**/src/mixins'),
+                    utilsPath = 'tmp/src/utils/utils/src/mixins',
+                    themePath = 'tmp/src/theme/src',
                     variablesPath = 'test/fixtures/variables',
                     mixinsPath = 'src/mixins';
 
-                pathData = [variablesPath].concat(controlsPath, utilsPath, mixinsPath);
+                pathData = [variablesPath].concat(controlsPath, utilsPath, themePath, mixinsPath);
 
                 debug("PATH DATA:", pathData);
                 return pathData;

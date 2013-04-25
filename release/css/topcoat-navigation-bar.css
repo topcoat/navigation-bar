@@ -252,8 +252,8 @@ limitations under the License.
 }
 
 /*
- TopCoat Navigation Bar
- ---------------------
+Navigation Bar
+--------------
 
     <div class="topcoat-navigation-bar">
         <div class="topcoat-navigation-bar__item left quarter">
@@ -272,6 +272,16 @@ limitations under the License.
     </div>
 */
 .topcoat-navigation-bar {
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  user-select: none;
   height: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -293,11 +303,18 @@ limitations under the License.
   border: none;
   margin: 0;
   line-height: 4rem;
-  vertical-align: baseline;
+  vertical-align: top;
 }
 .topcoat-navigation-bar__title {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
