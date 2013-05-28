@@ -262,7 +262,7 @@ Navigation Bar
             </a>
         </div>
         <div class="topcoat-navigation-bar__item center half">
-            <h1 class="navigation-bar__title">Header</h1>
+            <h1 class="topcoat-navigation-bar__title">Header</h1>
         </div>
         <div class="topcoat-navigation-bar__item right quarter">
             <a class="topcoat-icon-button--quiet">
@@ -274,6 +274,9 @@ Navigation Bar
 .topcoat-navigation-bar {
   box-sizing: border-box;
   background-clip: padding-box;
+  white-space: nowrap;
+  overflow: hidden;
+  word-spacing: 0;
   padding: 0;
   margin: 0;
   font: inherit;
@@ -317,4 +320,5 @@ Navigation Bar
   overflow: hidden;
   font-size: 1.3rem;
   font-weight: 400;
+  color: #000;
 }
