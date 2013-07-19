@@ -1,24 +1,15 @@
 {
-  "name": "navigation-bar",
+  "name": "topcoat-navigation-bar",
   "version": "0.3.0",
-  "description": "TopCoat navigation bar skin",
+  "description": "Topcoat navigation bar skin",
   "directories": {
-    "test": "test"
-  },
-  "topcoat": {
-    "controls": {
-      "topcoat/button-base": "",
-      "topcoat/navigation-bar-base": ""
-    },
-    "theme": {
-      "topcoat/theme": ""
-    },
-    "utils": {
-      "topcoat/utils": ""
-    }
+    "test": "test",
+    "lib": "src",
+    "bin": "css"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "grunt"
   },
   "repository": {
     "type": "git",
@@ -27,20 +18,27 @@
   "keywords": [
     "css",
     "topcoat",
-    "adobe"
+    "adobe",
+    "navigation",
+    "bar"
   ],
   "author": "@dam Kristofer Joseph",
-  "license": "Apache",
+  "license": "Apache2",
   "devDependencies": {
-    "grunt-contrib-stylus": "~0.5.0",
+    "grunt-contrib-stylus": "~0.6.0",
     "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.3.1",
-    "grunt-contrib-nodeunit": "~0.1.2",
-    "grunt-contrib-jade": "~0.5.0",
-    "grunt-zip": "~0.7.0",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-topcoat": "0.0.6",
-    "grunt-contrib-cssmin": "~0.6.0",
-    "debug": "~0.7.2"
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-jade": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "dependencies": {
+    "topcoat-theme": "~0.4.0",
+    "topcoat-navigation-bar-base": "~0.4.0",
+    "topcoat-icon-button": "~0.3.0",
+    "topcoat-utils": "~0.1.0",
+    "topcoat-button-base": "~0.4.1"
   }
 }
