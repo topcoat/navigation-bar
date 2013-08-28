@@ -28,17 +28,32 @@ module.exports = function(grunt) {
         },
 
         stylus: {
-            compile: {
+            mobilelight: {
                 options: {
-                    paths: ['node_modules/topcoat-navigation-bar-base/src/mixins', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src', 'node_modules/topcoat-theme/src/includes'],
-                    import: ['navigation-bar-mixin', 'utils', 'theme-topcoat-mobile-light', 'global', 'layout', 'position', 'fonts'],
+                    paths: ['node_modules/topcoat-navigation-bar-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src', 'node_modules/topcoat-theme/src/includes'],
+                    import: ['theme-topcoat-mobile-light', 'layout', 'position'],
                     compress: false
                 },
+
                 files: [{
                     src: 'src/topcoat-navigation-bar.styl',
-                    dest: 'css/topcoat-navigation-bar.css',
+                    dest: 'css/topcoat-navigation-bar-mobile-light.css'
+                }]
+            },
+
+            mobiledark: {
+                options: {
+                    paths: ['node_modules/topcoat-navigation-bar-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src', 'node_modules/topcoat-theme/src/includes'],
+                    import: ['theme-topcoat-mobile-dark', 'layout', 'position'],
+                    compress: false
+                },
+
+                files: [{
+                    src: 'src/topcoat-navigation-bar.styl',
+                    dest: 'css/topcoat-navigation-bar-mobile-dark.css'
                 }]
             }
+
         },
 
         cssmin: {
@@ -50,6 +65,7 @@ module.exports = function(grunt) {
                 ext: '.min.css'
             }
         },
+
         topdoc: {
             usageguides: {
                 options: {
@@ -65,20 +81,7 @@ module.exports = function(grunt) {
             }
         },
 
-        jade: {
-            compile: {
-                expand: true,
-                cwd: 'test/perf',
-                src: ['*.jade'],
-                dest: 'test/perf/',
-                ext: '.test.html'
-            }
-        },
-
         simplemocha: {
-            options: {
-                ui: 'bdd'
-            },
             all: {
                 src: ['test/*.test.js']
             }
@@ -94,7 +97,6 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -102,7 +104,7 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus', 'jade']);
+    grunt.registerTask('build', ['stylus']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'topdoc']);
 

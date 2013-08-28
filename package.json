@@ -28,7 +28,6 @@
     "grunt-contrib-stylus": "~0.6.0",
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.4.4",
-    "grunt-contrib-jade": "~0.7.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-cssmin": "~0.6.1",
     "grunt-simple-mocha": "~0.4.0",
@@ -38,7 +37,7 @@
   },
   "dependencies": {
     "topcoat-theme": "~0.4.0",
-    "topcoat-navigation-bar-base": "~0.4.0",
-    "topcoat-utils": "~0.1.0"
+    "topcoat-utils": "~0.1.0",
+    "topcoat-navigation-bar-base": "~0.5.0"
   }
 }
