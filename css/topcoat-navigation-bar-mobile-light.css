@@ -101,7 +101,7 @@
     - bar
 */
 .topcoat-navigation-bar {
-  height: 4rem;
+  height: 4.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
   background: #e5e9e8;
@@ -110,7 +110,7 @@
 }
 .topcoat-navigation-bar__item {
   margin: 0;
-  line-height: 4rem;
+  line-height: 4.375rem;
   vertical-align: top;
 }
 .topcoat-navigation-bar__title {
