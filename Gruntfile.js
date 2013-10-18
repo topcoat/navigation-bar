@@ -22,17 +22,21 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
 
         clean: {
             release: ['css']
         },
 
         stylus: {
+
+            options: {
+                paths: grunt.file.expand('node_modules/topcoat-*/src'),
+                compress: false
+            },
             mobilelight: {
                 options: {
-                    paths: ['node_modules/topcoat-navigation-bar-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src', 'node_modules/topcoat-theme/src/includes'],
-                    import: ['theme-topcoat-mobile-light', 'layout', 'position'],
-                    compress: false
+                    import: ['theme-topcoat-mobile-light', 'includes/layout', 'includes/position']
                 },
 
                 files: [{
@@ -43,9 +47,7 @@ module.exports = function(grunt) {
 
             mobiledark: {
                 options: {
-                    paths: ['node_modules/topcoat-navigation-bar-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src', 'node_modules/topcoat-theme/src/includes'],
-                    import: ['theme-topcoat-mobile-dark', 'layout', 'position'],
-                    compress: false
+                    import: ['theme-topcoat-mobile-dark', 'includes/layout', 'includes/position']
                 },
 
                 files: [{
@@ -64,6 +66,17 @@ module.exports = function(grunt) {
                 dest: 'css',
                 ext: '.min.css'
             }
+        },
+
+        autoprefixer: {
+          dist: {
+            files: [{
+              expand: true,
+              cwd: 'css',
+              src: ['*.css', '!*.min.css'],
+              dest: 'css/'
+            }]
+          }
         },
 
         topdoc: {
@@ -101,10 +114,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-topdoc');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus']);
+    grunt.registerTask('default', ['clean', 'build', 'test','release']);
+    grunt.registerTask('build', ['stylus', 'autoprefixer']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'topdoc']);
 
