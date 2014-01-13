@@ -1,39 +1,3 @@
-.quarter {
-  width: 25%;
-}
-
-.half {
-  width: 50%;
-}
-
-.three-quarters {
-  width: 75%;
-}
-
-.third {
-  width: 33.333%;
-}
-
-.two-thirds {
-  width: 66.666%;
-}
-
-.full {
-  width: 100%;
-}
-
-.left {
-  text-align: left;
-}
-
-.center {
-  text-align: center;
-}
-
-.right {
-  text-align: right;
-}
-
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
@@ -50,50 +14,41 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *
-*/
-
-.navigation-bar,
-.topcoat-navigation-bar {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  white-space: nowrap;
-  overflow: hidden;
-  word-spacing: 0;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+*/@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Regular.otf');
 }
 
-.navigation-bar__item,
-.topcoat-navigation-bar__item {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Light.otf');
+  font-weight: 200;
 }
 
-.navigation-bar__title,
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Semibold.otf');
+  font-weight: 600;
+}
+
+body {
+  font: 16px "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: hsla(200, 2%, 30%, 1);
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.topcoat-navigation-bar,
+.topcoat-navigation-bar__item,
 .topcoat-navigation-bar__title {
   padding: 0;
   margin: 0;
@@ -101,9 +56,41 @@
   color: inherit;
   background: transparent;
   border: none;
-  text-overflow: ellipsis;
+}
+
+.topcoat-navigation-bar {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topcoat-navigation-bar,
+.topcoat-navigation-bar__item {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-navigation-bar,
+.topcoat-navigation-bar__title {
   white-space: nowrap;
   overflow: hidden;
+}
+
+.topcoat-navigation-bar {
+  word-spacing: 0;
+}
+
+.topcoat-navigation-bar__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topcoat-navigation-bar__title {
+  text-overflow: ellipsis;
 }
 
 /* topdoc
@@ -127,10 +114,10 @@
   height: 4.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  background: #e5e9e8;
-  color: #454545;
-  -webkit-box-shadow: inset 0 -1px #9daca9, 0 1px #d6dcdb;
-  box-shadow: inset 0 -1px #9daca9, 0 1px #d6dcdb;
+  background: hsla(180, 1%, 35%, 1);
+  color: hsla(0, 100%, 100%, 1);
+  box-shadow: inset 0 -1px hsla(180, 1%, 20%, 1), 0 1px hsla(180, 1%, 27%, 1);
+  text-align: center;
 }
 
 .topcoat-navigation-bar__item {
@@ -142,5 +129,5 @@
 .topcoat-navigation-bar__title {
   font-size: 1.3rem;
   font-weight: 400;
-  color: #454545;
+  color: hsla(0, 100%, 100%, 1);
 }

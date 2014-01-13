@@ -15,7 +15,7 @@
 * limitations under the License.
 *
 */
-@import navigation-bar
+@import "topcoat-navigation-bar-base";
 /* topdoc
   name: Navigation Bar
   description: A place where navigation goes to drink
@@ -33,24 +33,27 @@
     - bar
 */
 
-.topcoat-navigation-bar
-  @extend .navigation-bar
-  height: var-height--large
-  padding-left var-padding--navigation-bar
-  padding-right var-padding--navigation-bar
-  background var-background-color
-  color var-color--navigation-bar
-  box-shadow var-box-shadow--navigation-bar
+.navigation-bar {
+  extend: %navigation-bar;
+  height: var(height--large);
+  padding-left: var(padding--navigation-bar);
+  padding-right: var(padding--navigation-bar);
+  background: var(background-color);
+  color: var(color--navigation-bar);
+  box-shadow: var(box-shadow--navigation-bar);
+  text-align: center;
+}
 
-.topcoat-navigation-bar__item
-  @extend .navigation-bar__item
-  margin var-margin
-  line-height var-line-height--large
-  vertical-align top
+.navigation-bar__item {
+  extend: %navigation-bar__item;
+  margin: var(margin);
+  line-height: var(line-height--large);
+  vertical-align: top;
+}
 
-.topcoat-navigation-bar__title
-  @extend .navigation-bar__title
-  font-size var-font-size--large
-  font-weight var-font-weight--large
-  color var-color--navigation-bar
-
+.navigation-bar__title {
+  extend: %navigation-bar__title;
+  font-size: var(font-size--large);
+  font-weight: var(font-weight--large);
+  color: var(color--navigation-bar);
+}

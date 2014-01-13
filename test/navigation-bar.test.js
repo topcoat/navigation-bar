@@ -24,24 +24,24 @@ var grunt = require('grunt'),
 describe('Topcoat Navigation Bar', function() {
 
     it('should output correct mobile dark css', function() {
-        var actual = grunt.file.read('css/topcoat-navigation-bar-mobile-dark.css');
-        var expected = grunt.file.read('test/expected/topcoat-navigation-bar-mobile-dark.css');
+        var actual = grunt.file.read('css/mobile-dark.css');
+        var expected = grunt.file.read('test/expected/mobile-dark.css');
         assert.equal(actual, expected, 'should generate correct css');
     });
 
     it('should output correct mobile light css', function() {
-        var actual = grunt.file.read('css/topcoat-navigation-bar-mobile-light.css');
-        var expected = grunt.file.read('test/expected/topcoat-navigation-bar-mobile-light.css');
+        var actual = grunt.file.read('css/mobile-light.css');
+        var expected = grunt.file.read('test/expected/mobile-light.css');
         assert.equal(actual, expected, 'should generate correct css');
     });
 
     it('should not have any unrendered variables', function() {
-        var actual = grunt.file.read('css/topcoat-navigation-bar-mobile-light.css');
+        var actual = grunt.file.read('css/mobile-light.css');
         assert.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
     });
 
     it('should not have any unrendered variables', function() {
-        var actual = grunt.file.read('css/topcoat-navigation-bar-mobile-dark.css');
+        var actual = grunt.file.read('css/mobile-dark.css');
         assert.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
     });
 
