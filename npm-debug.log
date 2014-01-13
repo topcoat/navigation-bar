@@ -1,0 +1,163 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/garthdb/.nvm/v0.10.24/bin/node',
+1 verbose cli   '/Users/garthdb/.nvm/v0.10.24/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/garthdb/Topcoat/components/navigation-bar',
+5 verbose install   [ 'topcoat-navigation-bar-base',
+5 verbose install     'grunt',
+5 verbose install     'grunt-contrib-clean',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-simple-mocha',
+5 verbose install     'topcoat-theme-mobile-dark',
+5 verbose install     'topcoat-theme-mobile-light',
+5 verbose install     'topcoat-theme-desktop-light',
+5 verbose install     'topcoat-theme-desktop-dark',
+5 verbose install     'topdoc-theme',
+5 verbose install     'grunt-topdoc',
+5 verbose install     'grunt-topcoat' ] ]
+6 info preinstall topcoat-navigation-bar@0.4.2
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping grunt-contrib-clean@~0.4.1 /Users/garthdb/Topcoat/components/navigation-bar
+9 verbose already installed skipping topcoat-navigation-bar-base@~0.6.0 /Users/garthdb/Topcoat/components/navigation-bar
+10 verbose already installed skipping grunt@~0.4.1 /Users/garthdb/Topcoat/components/navigation-bar
+11 verbose already installed skipping grunt-contrib-cssmin@~0.6.2 /Users/garthdb/Topcoat/components/navigation-bar
+12 verbose already installed skipping grunt-simple-mocha@~0.4.0 /Users/garthdb/Topcoat/components/navigation-bar
+13 verbose already installed skipping topcoat-theme-mobile-dark@~0.1.8 /Users/garthdb/Topcoat/components/navigation-bar
+14 verbose already installed skipping topcoat-theme-desktop-light@~0.1.9 /Users/garthdb/Topcoat/components/navigation-bar
+15 verbose already installed skipping topcoat-theme-mobile-light@~0.1.7 /Users/garthdb/Topcoat/components/navigation-bar
+16 verbose already installed skipping topcoat-theme-desktop-dark@~0.1.7 /Users/garthdb/Topcoat/components/navigation-bar
+17 verbose already installed skipping topdoc-theme@~0.4.2 /Users/garthdb/Topcoat/components/navigation-bar
+18 verbose already installed skipping grunt-topdoc@~0.2.0 /Users/garthdb/Topcoat/components/navigation-bar
+19 verbose already installed skipping grunt-topcoat@~0.1.1 /Users/garthdb/Topcoat/components/navigation-bar
+20 silly resolved []
+21 info build /Users/garthdb/Topcoat/components/navigation-bar
+22 verbose linkStuff [ false, false, false, '/Users/garthdb/Topcoat/components' ]
+23 info linkStuff topcoat-navigation-bar@0.4.2
+24 verbose linkBins topcoat-navigation-bar@0.4.2
+25 verbose linkMans topcoat-navigation-bar@0.4.2
+26 verbose rebuildBundles topcoat-navigation-bar@0.4.2
+27 verbose rebuildBundles [ '.bin',
+27 verbose rebuildBundles   'grunt',
+27 verbose rebuildBundles   'grunt-contrib-clean',
+27 verbose rebuildBundles   'grunt-contrib-copy',
+27 verbose rebuildBundles   'grunt-contrib-cssmin',
+27 verbose rebuildBundles   'grunt-contrib-jade',
+27 verbose rebuildBundles   'grunt-contrib-stylus',
+27 verbose rebuildBundles   'grunt-contrib-watch',
+27 verbose rebuildBundles   'grunt-simple-mocha',
+27 verbose rebuildBundles   'grunt-topcoat',
+27 verbose rebuildBundles   'grunt-topdoc',
+27 verbose rebuildBundles   'topcoat-navigation-bar-base',
+27 verbose rebuildBundles   'topcoat-theme',
+27 verbose rebuildBundles   'topcoat-theme-desktop-dark',
+27 verbose rebuildBundles   'topcoat-theme-desktop-light',
+27 verbose rebuildBundles   'topcoat-theme-mobile-dark',
+27 verbose rebuildBundles   'topcoat-theme-mobile-light',
+27 verbose rebuildBundles   'topcoat-utils',
+27 verbose rebuildBundles   'topdoc-theme' ]
+28 verbose rebuild bundle /Users/garthdb/Topcoat/components/navigation-bar/node_modules/grunt-contrib-copy
+29 info build /Users/garthdb/Topcoat/components/navigation-bar/node_modules/grunt-contrib-copy
+30 info preinstall grunt-contrib-copy@0.4.1
+31 verbose linkStuff [ false,
+31 verbose linkStuff   false,
+31 verbose linkStuff   false,
+31 verbose linkStuff   '/Users/garthdb/Topcoat/components/navigation-bar/node_modules' ]
+32 info linkStuff grunt-contrib-copy@0.4.1
+33 verbose linkBins grunt-contrib-copy@0.4.1
+34 verbose linkMans grunt-contrib-copy@0.4.1
+35 verbose rebuildBundles grunt-contrib-copy@0.4.1
+36 info install grunt-contrib-copy@0.4.1
+37 info postinstall grunt-contrib-copy@0.4.1
+38 verbose rebuild bundle /Users/garthdb/Topcoat/components/navigation-bar/node_modules/grunt-contrib-jade
+39 info build /Users/garthdb/Topcoat/components/navigation-bar/node_modules/grunt-contrib-jade
+40 info preinstall grunt-contrib-jade@0.7.0
+41 verbose linkStuff [ false,
+41 verbose linkStuff   false,
+41 verbose linkStuff   false,
+41 verbose linkStuff   '/Users/garthdb/Topcoat/components/navigation-bar/node_modules' ]
+42 info linkStuff grunt-contrib-jade@0.7.0
+43 verbose linkBins grunt-contrib-jade@0.7.0
+44 verbose linkMans grunt-contrib-jade@0.7.0
+45 verbose rebuildBundles grunt-contrib-jade@0.7.0
+46 verbose rebuildBundles [ '.bin', 'grunt-lib-contrib', 'jade' ]
+47 info install grunt-contrib-jade@0.7.0
+48 info postinstall grunt-contrib-jade@0.7.0
+49 verbose rebuild bundle /Users/garthdb/Topcoat/components/navigation-bar/node_modules/grunt-contrib-stylus
+50 info build /Users/garthdb/Topcoat/components/navigation-bar/node_modules/grunt-contrib-stylus
+51 info preinstall grunt-contrib-stylus@0.6.0
+52 verbose linkStuff [ false,
+52 verbose linkStuff   false,
+52 verbose linkStuff   false,
+52 verbose linkStuff   '/Users/garthdb/Topcoat/components/navigation-bar/node_modules' ]
+53 info linkStuff grunt-contrib-stylus@0.6.0
+54 verbose linkBins grunt-contrib-stylus@0.6.0
+55 verbose linkMans grunt-contrib-stylus@0.6.0
+56 verbose rebuildBundles grunt-contrib-stylus@0.6.0
+57 verbose rebuildBundles [ '.bin', 'nib', 'stylus' ]
+58 info install grunt-contrib-stylus@0.6.0
+59 info postinstall grunt-contrib-stylus@0.6.0
+60 verbose rebuild bundle /Users/garthdb/Topcoat/components/navigation-bar/node_modules/grunt-contrib-watch
+61 info build /Users/garthdb/Topcoat/components/navigation-bar/node_modules/grunt-contrib-watch
+62 info preinstall grunt-contrib-watch@0.4.4
+63 verbose linkStuff [ false,
+63 verbose linkStuff   false,
+63 verbose linkStuff   false,
+63 verbose linkStuff   '/Users/garthdb/Topcoat/components/navigation-bar/node_modules' ]
+64 info linkStuff grunt-contrib-watch@0.4.4
+65 verbose linkBins grunt-contrib-watch@0.4.4
+66 verbose linkMans grunt-contrib-watch@0.4.4
+67 verbose rebuildBundles grunt-contrib-watch@0.4.4
+68 verbose rebuildBundles [ '.bin', 'gaze', 'tiny-lr' ]
+69 info install grunt-contrib-watch@0.4.4
+70 info postinstall grunt-contrib-watch@0.4.4
+71 verbose rebuild bundle /Users/garthdb/Topcoat/components/navigation-bar/node_modules/topcoat-theme
+72 info build /Users/garthdb/Topcoat/components/navigation-bar/node_modules/topcoat-theme
+73 info preinstall topcoat-theme@0.5.9
+74 verbose linkStuff [ false,
+74 verbose linkStuff   false,
+74 verbose linkStuff   false,
+74 verbose linkStuff   '/Users/garthdb/Topcoat/components/navigation-bar/node_modules' ]
+75 info linkStuff topcoat-theme@0.5.9
+76 verbose linkBins topcoat-theme@0.5.9
+77 verbose linkMans topcoat-theme@0.5.9
+78 verbose rebuildBundles topcoat-theme@0.5.9
+79 info install topcoat-theme@0.5.9
+80 info postinstall topcoat-theme@0.5.9
+81 verbose rebuild bundle /Users/garthdb/Topcoat/components/navigation-bar/node_modules/topcoat-utils
+82 info build /Users/garthdb/Topcoat/components/navigation-bar/node_modules/topcoat-utils
+83 info preinstall topcoat-utils@0.1.3
+84 verbose linkStuff [ false,
+84 verbose linkStuff   false,
+84 verbose linkStuff   false,
+84 verbose linkStuff   '/Users/garthdb/Topcoat/components/navigation-bar/node_modules' ]
+85 info linkStuff topcoat-utils@0.1.3
+86 verbose linkBins topcoat-utils@0.1.3
+87 verbose linkMans topcoat-utils@0.1.3
+88 verbose rebuildBundles topcoat-utils@0.1.3
+89 info install topcoat-utils@0.1.3
+90 info postinstall topcoat-utils@0.1.3
+91 info install topcoat-navigation-bar@0.4.2
+92 info postinstall topcoat-navigation-bar@0.4.2
+93 info prepublish topcoat-navigation-bar@0.4.2
+94 verbose unsafe-perm in lifecycle true
+95 info topcoat-navigation-bar@0.4.2 Failed to exec prepublish script
+96 error topcoat-navigation-bar@0.4.2 prepublish: `grunt`
+96 error Exit status 3
+97 error Failed at the topcoat-navigation-bar@0.4.2 prepublish script.
+97 error This is most likely a problem with the topcoat-navigation-bar package,
+97 error not with npm itself.
+97 error Tell the author that this fails on your system:
+97 error     grunt
+97 error You can get their info via:
+97 error     npm owner ls topcoat-navigation-bar
+97 error There is likely additional logging output above.
+98 error System Darwin 13.0.0
+99 error command "/Users/garthdb/.nvm/v0.10.24/bin/node" "/Users/garthdb/.nvm/v0.10.24/bin/npm" "install"
+100 error cwd /Users/garthdb/Topcoat/components/navigation-bar
+101 error node -v v0.10.24
+102 error npm -v 1.3.21
+103 error code ELIFECYCLE
+104 verbose exit [ 1, true ]
