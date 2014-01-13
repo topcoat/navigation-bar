@@ -1,6 +1,6 @@
 {
   "name": "topcoat-navigation-bar",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Topcoat navigation bar skin",
   "main": "index.html",
   "style": "src/navigation-bar.css",
