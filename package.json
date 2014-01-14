@@ -24,7 +24,11 @@
     "navigation",
     "bar"
   ],
-  "author": "@dam Kristofer Joseph",
+  "author": "Kristofer Joseph (http://twitter.com/dam)",
+  "contributors": [
+    "Kristofer Joseph (http://twitter.com/dam)",
+    "Garth Braithwaite (http://garthdb.com/)"
+  ],
   "license": "Apache2",
   "devDependencies": {
     "grunt": "~0.4.1",
