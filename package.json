@@ -1,21 +1,24 @@
 {
   "name": "topcoat-navigation-bar",
-  "version": "0.6.0",
+  "version": "0.0.0-development",
   "description": "Topcoat navigation bar skin",
-  "main": "index.html",
-  "style": "src/navigation-bar.css",
+  "style": "src/topcoat-navigation-bar",
   "directories": {
-    "test": "test",
-    "lib": "src",
-    "bin": "css"
+    "test": "test"
   },
   "scripts": {
-    "test": "grunt test",
-    "prepublish": "grunt"
+    "test": "mocha test/",
+    "build:mobile-dark": "rsn --namespace='topcoat' -o ./css/mobile-dark-navigation-bar.css -p [topcoat-variables-shared,topcoat-variables-mobile,topcoat-variables-dark,topcoat-fonts,topcoat-root] ./src/topcoat-navigation-bar.css",
+    "build:mobile-light": "rsn --namespace='topcoat' -o ./css/mobile-light-navigation-bar.css -p [topcoat-variables-shared,topcoat-variables-mobile,topcoat-variables-light,topcoat-fonts,topcoat-root] ./src/topcoat-navigation-bar.css",
+    "build": "rm -rfv ./css/* && npm run build:mobile-dark && npm run build:mobile-light",
+    "pretest": "npm run build",
+    "prepublish": "npm run topdoc",
+    "topdoc": "npm run build && rm -rfv ./demo/* && topdoc -s ./css -d ./docs -p 'Topcoat Navigation Bar' -t './node_modules/topdoc-theme'",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/navigation-bar.git"
+    "url": "https://github.com/topcoat/navigation-bar.git"
   },
   "keywords": [
     "css",
@@ -24,26 +27,37 @@
     "navigation",
     "bar"
   ],
-  "author": "Kristofer Joseph (http://twitter.com/dam)",
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
   "contributors": [
-    "Kristofer Joseph (http://twitter.com/dam)",
-    "Garth Braithwaite (http://garthdb.com/)"
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+    "Andrei Oprea <andrei.br92@gmail.com> (http://andreio.net/)"
   ],
-  "license": "Apache2",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  },
+  "homepage": "http://topcoat.io",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.4.1",
-    "grunt-contrib-cssmin": "~0.6.2",
-    "grunt-simple-mocha": "~0.4.0",
-    "topcoat-theme-mobile-dark": "~0.1.8",
-    "topcoat-theme-mobile-light": "~0.1.7",
-    "topcoat-theme-desktop-light": "~0.1.9",
-    "topcoat-theme-desktop-dark": "~0.1.7",
-    "topdoc-theme": "~0.4.2",
-    "grunt-topdoc": "~0.2.0",
-    "grunt-topcoat": "~0.1.1"
+    "autoprefixer": "^6.4.0",
+    "cz-customizable": "^4.0.0",
+    "mocha": "^3.0.2",
+    "resin": "^1.2.1",
+    "semantic-release": "^6.3.2",
+    "topcoat-fonts": "^0.3.0",
+    "topcoat-root": "^1.0.0",
+    "topcoat-variables-dark": "^1.1.2",
+    "topcoat-variables-light": "^1.1.0",
+    "topcoat-variables-mobile": "^1.1.0",
+    "topcoat-variables-shared": "^1.1.0",
+    "topdoc": "^0.4.0",
+    "topdoc-theme": "^0.5.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   },
   "dependencies": {
-    "topcoat-navigation-bar-base": "~0.6.0"
+    "topcoat-navigation-bar-base": "^1.0.0"
   }
 }
